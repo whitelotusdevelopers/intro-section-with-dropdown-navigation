@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta http-equiv="Type-Content" content="text/html;charset=UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="keywords" content="Intro Section With Dropdown Navigation">
+    <meta name="description" content="Intro Section With Dropdown Navigation">
+    <meta name="author" content="xWhiteCode">
+    <link rel="icon" href="assets/images/favicon-32x32.png" type="image/png" sizes="32x32">
+    <title>Intro Section With Dropdown Navigation</title>
+    <link rel="stylesheet" href="assets/css/index.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Epilogue:wght@500;700&display=swap" rel="stylesheet">
+  </head>
+  <body>
+    <noscript>
+     For full functionality of this site it is necessary to enable JavaScript.
+     Here are the <a href="https://www.enable-javascript.com/">
+     instructions how to enable JavaScript in your web browser</a>.
+    </noscript>
+    <header>
+      <div class="autowidth-fill flex">
+        <a href="index.html"><img src="assets/images/logo.svg" alt="Snap"></a>
+        <button type="button" id="toggle" aria-label="Toggle Main Menu" aria-controls="menu" aria-expanded="false"
+        ></button>
+        <div class="cover" id="menu">
+          <nav id="navbar" class="desktopflex">
+            <ul class="navlinks desktopflex">
+            <li class="dropdown">
+              <a href="#" class="navlink">Features</a>
+              <ul class="droplist">
+                <li>
+                  <a href="#">
+                    <img src="assets/images/icon-todo.svg" alt="Todo">
+                    <span>Todo List</span>
+                  </a>
+                </li>
+                <li>
+                  <a href="#">
+                    <img src="assets/images/icon-calendar.svg" alt="Calendar">
+                    <span>Calendar</span>
+                  </a>
+                </li>
+                <li>
+                  <a href="#">
+                    <img src="assets/images/icon-reminders.svg" alt="Reminders">
+                    <span>Reminders</span>
+                  </a>
+                </li>
+                <li>
+                  <a href="#">
+                    <img src="assets/images/icon-planning.svg" alt="Planning">
+                    <span>Planning</span>
+                  </a>
+                </li>
+              </ul>
+            </li>
+            <li class="dropdown">
+              <a href="#" class="navlink">Company</a>
+              <ul class="droplist">
+                <li>
+                  <a href="#">
+                    <span>History</span>
+                  </a>
+                </li>
+                <li>
+                  <a href="#">
+                    <span>Our Team</span>
+                  </a>
+                </li>
+                <li>
+                  <a href="#">
+                    <span>Blog</span>
+                  </a>
+                </li>
+              </ul>
+            </li>
+            <li><a href="#" class="navlink">Careers</a></li>
+            <li><a href="#" class="navlink">About</a></li>
+            </ul>
+            <ul class="navlinks center desktopflex">
+              <li><a href="#" class="navlink btn">Login</a></li>
+              <li class=" p0"><a href="#" class="navlink btn border-outline">Register</a></li>
+            </ul>
+          </nav>
+      </div>
+      </div>
+    </header>
+    <main>
+      <div class="autowidth desktopflex row-reverse">
+        <figure>
+          <picture>
+            <source media="(min-width: 1200px)" srcset="assets/images/image-hero-desktop.png">
+            <img src="assets/images/image-hero-mobile.png" alt="Hero">
+          </picture>
+        </figure>
+        <div class="p16">
+          <h1 class="heading">Make remote work</h1>
+          <p class="gray">Get your team in sync, no matter your location. Streamline processes, create team rituals, and watch productivity soar.</p>
+          <a href="#" class="btn border-outline more bold">Learn more</a>
+          <ul class="footer flex">
+            <li><a href="#"><img src="assets/images/client-databiz.svg" alt="Databiz"></a></li>
+            <li><a href="#"><img src="assets/images/client-audiophile.svg" alt="Audiophile"></a></li>
+            <li><a href="#"><img src="assets/images/client-meet.svg" alt="Meet"></a></li>
+            <li><a href="#"><img src="assets/images/client-maker.svg" alt="Maker"></a></li>
+          </ul>
+        </div>
+      </div>
+    </main>
+    <script src="assets/js/index.js"></script>
+  </body>
+</html>

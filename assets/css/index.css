@@ -1,0 +1,227 @@
+* {
+  background-color: transparent;
+  border: none;
+  color: inherit;
+  font: inherit;
+  margin: 0;
+  padding: 0;
+  outline: none;
+}
+*, ::after, ::before {
+  box-sizing: border-box;
+}
+body {
+  background-color: #fafafa;
+  color: hsl(0, 0%, 41%);
+  font: 500 18px 'Epilogue', sans-serif;
+  overflow-x: hidden;
+}
+a {
+  text-decoration: none;
+}
+button {
+  cursor: pointer;
+}
+button, .btn {
+  display: inline-flex;
+  user-select: none;
+}
+h1, .bold {
+  font-weight: 700;
+}
+img {
+  display: block;
+}
+ul {
+  list-style: none;
+}
+.autowidth-fill, .autowidth {
+  width: min(calc(100% - 32px), 1360px);
+  margin-inline: auto;
+}
+.autowidth {
+  width: min(100%, 1140px);
+}
+.flex, .droplist a {
+  display: flex;
+}
+.flex, .desktopflex, .droplist a {
+  align-items: center;
+  justify-content: space-between;
+}
+.row-reverse {
+  flex-direction: row-reverse;
+}
+header {
+  padding-block: 24px;
+}
+#toggle::before {
+  content: url("data:image/svg+xml,%3Csvg width='32' height='18' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='%23151515' fill-rule='evenodd'%3E%3Cpath d='M0 0h32v2H0zM0 8h32v2H0zM0 16h32v2H0z'/%3E%3C/g%3E%3C/svg%3E");
+}
+#toggle.active::before {
+  content: url("data:image/svg+xml,%3Csvg width='26' height='26' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='%23151515' fill-rule='evenodd'%3E%3Cpath d='m2.393.98 22.628 22.628-1.414 1.414L.979 2.395z'/%3E%3Cpath d='M.98 23.607 23.609.979l1.414 1.414L2.395 25.021z'/%3E%3C/g%3E%3C/svg%3E");
+  z-index: 5;
+}
+.cover {
+  background-color: rgba(0, 0, 0, 0.2);
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  right: -100%;
+  top: 0;
+  z-index: 1;
+  transition: right 200ms ease;
+}
+#navbar {
+  background-color: white;
+  position: absolute;
+  height: 100%;
+  width: 240px;
+  padding: 80px 25px;
+  right: -100%;
+  top: 0;
+  z-index: 2;
+  transition: right 200ms 200ms ease;
+}
+.cover.active, .cover.active #navbar {
+  right: 0;
+}
+#navbar li {
+  padding: 11px 0;
+}
+.dropdown .navlink {
+  padding-right: 26px;
+  background: transparent url(../images/icon-arrow-down.svg) right center/auto no-repeat;
+}
+.dropdown .navlink:hover, .dropdown.active .navlink {
+  background-image: url(../images/icon-arrow-up.svg);
+}
+.droplist {
+  padding: 13px 23px;
+  display: none;
+}
+.dropdown.active .droplist {
+  display: block;
+}
+.droplist a {
+  justify-content: flex-start;
+}
+.droplist img {
+  margin-right: 15px;
+}
+.center {
+  text-align: center;
+}
+.border-outline {
+  border: 1px solid currentColor;
+  border-radius: 1rem;
+  display: block;
+  padding: 14px 25px;
+  transition: all 200ms ease;
+}
+#navbar a:hover {
+  color: black;
+}
+main {
+  text-align: center;
+}
+main img {
+  max-width: 100%;
+}
+.p16 {
+  padding: 16px;
+}
+.heading {
+  color: black;
+  font-size: 2.2rem;
+  margin-top: 55px;
+}
+.gray {
+  margin-block: 25px;
+  font-size: 16px;
+  line-height: 1.6;
+}
+.more {
+  background-color: black;
+  border-color: black;
+  color: white;
+  display: inline-flex;
+  margin-bottom: 48px;
+}
+.more:hover {
+  background-color: white;
+  border-color: hsl(0, 0%, 41%);
+  color: hsl(0, 0%, 41%);
+}
+.footer li:not(:last-child) {
+  margin-right: 28px;
+}
+@media (min-width: 1200px) {
+  header {
+    padding-block: 21px;
+  }
+  .desktopflex {
+    display: flex;
+  }
+  main {
+    text-align: start;
+  }
+  #toggle {
+    display: none;
+  }
+  .cover, #navbar {
+    position: static;
+    width: auto;
+    height: auto;
+    padding: 0;
+  }
+  .cover {
+    flex-grow: 1;
+    margin-left: 62px;
+  }
+  .cover li:not(:last-child) {
+    margin-right: 40px;
+  }
+  #navbar li.p0 {
+    padding: 0;
+  }
+  .dropdown {
+    position: relative;
+  }
+  .dropdown .droplist {
+    background-color: white;
+    border-radius: 1rem;
+    position: absolute;
+    left: 0;
+    top: 100%;
+    z-index: 1;
+    box-shadow: 0 0 1rem 0.25rem rgba(0, 0, 0, 0.1);
+  }
+  .dropdown .droplist:last-child {
+    left: auto;
+    right: 0;
+  }
+  .dropdown:hover .droplist {
+    display: block;
+  }
+  .dropdown .droplist a {
+    margin: 0;
+    white-space: nowrap;
+  }
+  .p16 {
+    margin-right: 152px;
+    align-self: flex-end;
+    flex-grow: 1;
+  }
+  .heading {
+    font-size: 4.5rem;
+    width: 476px;
+  }
+  .gray {
+    margin-block: 55px;
+    width: 400px;
+  }
+  .more {
+    margin-bottom: 108px;
+  }
+}
