@@ -10,7 +10,7 @@
   });
 
   menu.addEventListener("click", function (e) {
-    if (navbar.contains(e.target)) {
+    if (!navbar.contains(e.target)) {
       this.classList.remove("active");
       menu.classList.remove("active");
     }
@@ -20,5 +20,11 @@
     btn.addEventListener("click", function () {
       this.classList.toggle("active");
     });
+  });
+
+  document..addEventListener("click", function (e) {
+    if (dropdown.forEach(btn => !btn.contains(e.target))) {
+      dropdown.forEach(btn => !btn..classList.remove("active"));
+    }
   });
 })();
