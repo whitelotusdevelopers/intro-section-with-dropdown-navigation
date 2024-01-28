@@ -2,7 +2,7 @@
   const toggle = document.getElementById("toggle"),
     menu = document.getElementById("menu"),
     navbar = document.getElementById("navbar"),
-    dropdown = document.querySelectorAll(".dropdown");
+    dropdown = document.querySelectorAll(".dropdown a");
   
   toggle.addEventListener("click", function () {
     this.classList.toggle("active");
@@ -18,13 +18,17 @@
 
   dropdown.forEach(btn => {
     btn.addEventListener("click", function () {
-      this.classList.toggle("active");
+      this.parentElement.classList.toggle("active");
     });
   });
 
   document.addEventListener("click", function (e) {
-    if (dropdown.forEach(btn => !btn.contains(e.target))) {
-      dropdown.forEach(btn => !btn.classList.remove("active"));
-    }
+    dropdown.forEach(btn => {
+      if (!btn.contains(e.target) && !toggle.contains(e.target)) {
+        toggle.classList.toggle("active");
+        btn.parentElement.classList.remove("active");
+      }
+    });
   });
+
 })();
