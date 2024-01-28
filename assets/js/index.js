@@ -24,7 +24,7 @@
 
   document.addEventListener("click", function (e) {
     if (dropdown.forEach(btn => !btn.contains(e.target))) {
-      dropdown.forEach(btn => !btn..classList.remove("active"));
+      dropdown.forEach(btn => !btn.classList.remove("active"));
     }
   });
 })();
