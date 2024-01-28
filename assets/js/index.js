@@ -25,7 +25,7 @@
   document.addEventListener("click", function (e) {
     dropdown.forEach(btn => {
       if (!btn.contains(e.target) && !toggle.contains(e.target)) {
-        toggle.classList.toggle("active");
+        toggle.classList.remove("active");
         btn.parentElement.classList.remove("active");
       }
     });
