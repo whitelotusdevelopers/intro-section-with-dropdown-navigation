@@ -126,7 +126,7 @@ main {
   text-align: center;
 }
 main img {
-  max-width: 100%;
+  width: 100%;
 }
 .p16 {
   padding: 16px;
