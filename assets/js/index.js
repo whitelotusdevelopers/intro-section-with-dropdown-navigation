@@ -12,7 +12,7 @@
     menu.classList.toggle("active");
     console.log(toggle.ariaExpanded);
   });
-
+  // Comment
   menu.addEventListener("click", function (e) {
     if (!navbar.contains(e.target) && !toggle.contains(e.target)) {
       toggle.classList.remove("active");
